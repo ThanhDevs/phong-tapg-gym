@@ -34,7 +34,7 @@
 
     // Show Contact Form
     var showContactForm = function () {
-        $('.btn-contact').on('click', function () {
+        $('.btn-show-form').on('click', function () {
             $('.row-banner-form, #fixed-form-cls').addClass('is-show');
         });
 
