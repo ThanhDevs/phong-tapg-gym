@@ -1,27 +1,6 @@
 ; (function ($) {
     'use strict'
 
-    var zoomImage = function () {
-        // Get section
-        var $section = $('.row-location');
-        $section.find('.image-zoom').panzoom({
-            $zoomIn: $section.find(".zoom-in"),
-            $zoomOut: $section.find(".zoom-out"),
-            startTransform: 'scale(1.1)',
-            increment: 0.1,
-            minScale: 1,
-            contain: 'invert'
-        });
-    }
-
-    // Sliders
-    var sliderShow = function () {
-        $('.single-item-slider').slick({
-            dots: true,
-            arrows: false
-        });
-    }
-
     // Show Main Menu
     var showMainMenu = function () {
         $('#hamburger').on('click', function () {
@@ -67,34 +46,6 @@
         })
     }
 
-    // Angent list
-    var angntList = function () {
-        $('.angent-list-slider').slick({
-            dots: true,
-            infinite: true,
-            slidesToShow: 4,
-            slidesToScroll: 4,
-            responsive: [
-                {
-                    breakpoint: 991,
-                    settings: {
-                        slidesToShow: 2,
-                        slidesToScroll: 2,
-                        infinite: true,
-                        dots: true
-                    }
-                },
-                {
-                    breakpoint: 767,
-                    settings: {
-                        slidesToShow: 1,
-                        slidesToScroll: 1
-                    }
-                }
-            ]
-        });
-    }
-
     // Target Scroll Section
     var targetScrollSection = function () {
         $('#main-menu ul li a, .scroll-btn').on('click', function () {
@@ -110,52 +61,22 @@
         });
     }
 
-    // Tabs
-    var tabs = function () {
-        $('.ttabs, .ttabs.style1').each(function () {
+    // Show Contact Form
+    var showContactForm = function () {
+        $('.btn-contact').on('click', function () {
+            $('.row-banner-form, #fixed-form-cls').addClass('is-show');
+        });
 
-            $(this).find('.tab-nav li').first().addClass('active');
-            $(this).children('.tab-content').first().addClass('active').show()
-
-            $(this).find('.tab-nav li').on('click', function () {
-
-                var tabNavIndex = $(this).index();
-                var conIndex = $(this).parents('.ttabs').children('.tab-content').eq(tabNavIndex)
-
-                $(this).addClass('active').siblings().removeClass('active')
-                conIndex.addClass('active').siblings('.tab-content').removeClass('active')
-            })
-
-        })
-
-        $('.children-tabs').each(function () {
-
-            $(this).find('.children-tab-nav li').first().addClass('active');
-            $(this).children('.children-tab-content').first().addClass('active').show()
-
-            $(this).find('.children-tab-nav li').on('click', function () {
-
-                var tabNavIndex = $(this).index();
-                var conIndex = $(this).parents('.children-tabs').children('.children-tab-content').eq(tabNavIndex)
-
-                $(this).addClass('active').siblings().removeClass('active')
-                conIndex.addClass('active').siblings('.children-tab-content').removeClass('active')
-            })
-
-        })
-    }
-
-    // Remover Animate for mobile
-    var removerAnimateForMobile = function () {
-        if ($(window).width() < 767) {
-            $('.wow').removeClass('wow')
-        }
-    }
-
+        $('#fixed-form-cls').on('click', function () {
+            $('.row-banner-form, #fixed-form-cls').removeClass('is-show');
+        });
+    };
 
     // Dom Ready
     $(function () {
         showMainMenu();
+        showContactForm();
+        targetScrollSection();
 
     });
 })(jQuery);

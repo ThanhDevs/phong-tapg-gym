@@ -139,7 +139,7 @@ img {
 }
 
 .twrap-full {
-    width: 1200px;
+    width: 90%;
     margin: 0 auto;
 }
 
@@ -159,6 +159,46 @@ img {
     display: table;
     clear: both;
     content: "";
+}
+
+
+/* Form  */
+form .form-group {
+  margin: 15px 0;
+}
+
+form .form-group input {
+  border: none;
+  width: 100%;
+  background: transparent;
+  border-bottom: 1px solid #e4e4e4!important;
+  border: 0px;
+  color: #fff;
+}
+
+form .form-group input:focus {
+  outline: none;
+  border-bottom: 1px solid #ffc422 !important;
+}
+
+form .btn {
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  background: #ffc422;
+  color: #223353;
+  border: 0px;
+  outline: none;
+  text-transform: uppercase;
+  padding: 0px;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+form .btn-full-width {
+  width: 100%;
+  display: block;
 }
 
 /* Grid */

@@ -313,6 +313,151 @@ section#banner {
     font-size: 16px;
 }
 
+/* Banner Form */
+.row-banner-form {
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background: #fff;
+  padding: 40px 23px;
+  float: right;
+  height: 100%;
+  color: #222;
+  -webkit-transform: translate(366px, 0);
+  -moz-transform: translate(366px, 0);
+  transform: translate(366px, 0);
+  -webkit-transition: all 0.6s ease;
+  -moz-transition: all 0.6s ease;
+  transition: all 0.6s ease;
+}
+
+.row-banner-form.fixed-form {
+  opacity: 0;
+  position: fixed;
+  pointer-events: none;
+  top: 0;
+  background: #212c40;
+  -webkit-transform: translate(366px, 0);
+  -moz-transform: translate(366px, 0);
+  transform: translate(366px, 0);
+}
+
+.row-banner-form.fixed-form.is-show {
+  opacity: 1;
+  pointer-events: all;
+  -webkit-transform: translate(0, 0);
+  -moz-transform: translate(0, 0);
+  transform: translate(0, 0);
+  -webkit-transition: all 0.6s ease;
+  -moz-transition: all 0.6s ease;
+  transition: all 0.6s ease;
+  margin-right: 0 !important;
+  display: block;
+  height: 100vh !important;
+}
+
+
+/* Closeform btn */
+#fixed-form-cls {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  pointer-events: none;
+  cursor: pointer;
+  width: 50px;
+  opacity: 0;
+  visibility: hidden;
+}
+
+#fixed-form-cls.fixed-form-cls {
+  pointer-events: all;
+  opacity: 1;
+}
+
+.row-banner-form .form-title {
+  font-family: Main-Font-SemiBold;
+  text-align: left;
+  text-transform: uppercase;
+  font-size: 24px;
+  color: #222;
+  margin-bottom: 30px;
+}
+
+.row-banner-form .form-group label {
+  display: block;
+  width: 100%;
+  text-transform: uppercase;
+}
+
+/* Button Submit */
+.row-banner-form .btn:after {
+  position: absolute;
+  top: -20px;
+  left: 0;
+  width: 110%;
+  height: 110%;
+  background-color: rgba(255, 255, 255, 0.5);
+  -webkit-transition: -webkit-transform 0.6s;
+  -moz-transition: -moz-transform 0.6s;
+  -o-transition: -o-transform 0.6s;
+  -ms-transition: -ms-transform 0.6s;
+  transition: transform 0.6s;
+  -webkit-transform: scale3d(1.9, 1.4, 1) rotate3d(0, 0, 1, 45deg) translate3d(0, -150%, 0);
+  -ms-transform: scale3d(1.9, 1.4, 1) rotate3d(0, 0, 1, 45deg) translate3d(0, -150%, 0);
+  -moz-transform: scale3d(1.9, 1.4, 1) rotate3d(0, 0, 1, 45deg) translate3d(0, -150%, 0);
+  transform: scale3d(1.9, 1.4, 1) rotate3d(0, 0, 1, 45deg) translate3d(0, -150%, 0);
+  content: '';
+}
+
+.row-banner-form .btn:hover:after {
+  webkit-transform: scale3d(1.9, 1.4, 1) rotate3d(0, 0, 1, 45deg) translate3d(0, 150%, 0);
+  -moz-transform: scale3d(1.9, 1.4, 1) rotate3d(0, 0, 1, 45deg) translate3d(0, 150%, 0);
+  -ms-transform: scale3d(1.9, 1.4, 1) rotate3d(0, 0, 1, 45deg) translate3d(0, 150%, 0);
+  transform: scale3d(1.9, 1.4, 1) rotate3d(0, 0, 1, 45deg) translate3d(0, 150%, 0);
+}
+
+/* Socials logo */
+.row-banner-form .social-network-login {
+  text-align: center;
+  color: #FFF;
+}
+
+.row-banner-form .social-network-item {
+  display: block;
+  float: left;
+  height: 40px;
+  line-height: 40px;
+  width: calc(50% - 7px);
+  margin-right: 14px;
+  text-align: center;
+  color: #fff;
+  text-decoration: none;
+}
+
+.row-banner-form .social-network-item.social-facebook {
+  background-color: #314B7E;
+}
+
+.row-banner-form .social-network-item.social-google {
+  margin-right: 0;
+  background-color: #BE272F;
+}
+
+/* Show contact form */
+.row-banner-form.is-show {
+    -moz-transform: translate(0, 0);
+    transform: translate(0, 0);
+}
+
+#fixed-form-cls.is-show {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: all;
+}
+
 /*
 -----------------------
 About Section
