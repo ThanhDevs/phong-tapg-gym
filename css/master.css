@@ -268,51 +268,6 @@ section#banner {
     margin-bottom: 30px;
 }
 
-.banner-line-block {
-    position: relative;
-    width: 100%;
-    bottom: 60px;
-    z-index: 10;
-}
-
-.banner-line-block .banner-line {
-    width: calc(100% - 90px);
-    height: 1.5px;
-    background-color: #FFC422;
-    float: right;
-    opacity: 0.5;
-}
-
-.banner-icon-line {
-    float: left;
-    width: 40px;
-    height: auto;
-    position: absolute;
-    left: 0;
-    bottom: 0;
-}
-
-.banner-icon-line img {
-    width: 100%;
-    display: block;
-}
-
-.row-banner-text .btn-wrap a {
-    text-decoration: none;
-    background-color: #ffc422;
-    line-height: 40px;
-    display: inline-block;
-    padding: 0 40px;
-    border-radius: 30px;
-    margin-right: 16px;
-    color: #fff;
-    font-family: serif;
-}
-
-.row-banner-text .btn-wrap i, .row-banner-text .btn-wrap span {
-    font-size: 16px;
-}
-
 /* Banner Form */
 .row-banner-form {
   position: fixed;
@@ -458,6 +413,50 @@ section#banner {
     pointer-events: all;
 }
 
+/* OFFER */
+.offer {
+    text-align: center;
+    background-color: transparent;
+    display: inline-block;
+    border: 2px dotted #FFC422;
+    padding: 0 20px 15px;
+    position: relative;
+    line-height: 0px;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+
+.offer .title {
+    font-size: 20px;
+    text-shadow: none;
+    color: #fff;
+    position: relative;
+    top: -12px;
+    background-color: #0A0A0C;
+    padding: 0 15px;
+    display: inline-block;
+    line-height: 24px;
+}
+
+.offer .des {
+    color: #fff;
+    font-size: 25px;
+    text-transform: uppercase;
+    padding: 15px 0;
+}
+
+.row-banner .btn-wrap a {
+    text-decoration: none;
+    background-color: #fff;
+    display: inline-block;
+    padding: 0px 66px;
+    line-height: 50px;
+    margin-top: 15px;
+    border-radius: 4px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
 /*
 -----------------------
 About Section
@@ -532,4 +531,24 @@ About Section
     height: 2px;
     background-color: #ffc422;
     display: inline-block;
+}
+
+
+/*
+-----------------------
+Footer
+-----------------------
+ */
+
+/* scrolltop */
+.scrolltop {
+    display: inline-block;
+    text-decoration: none;
+    position: fixed;
+    right: 39px;
+    bottom: 60px;
+    transform: rotate(-90deg);
+    color: #fff;
+    z-index: 999;
+    font-size: 20px;
 }
