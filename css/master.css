@@ -482,7 +482,7 @@ About Section
 }
 
 .row-about .image-box {
-    padding: 60px;
+    padding: 60px 60px 60px 0;
     color: #fff;
     position: relative;
     z-index: 1;
